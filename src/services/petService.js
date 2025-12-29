@@ -7,7 +7,7 @@ async function index (){
         const response = await axios.get(BASE_URL)
         return response.data.allPets
     } catch (err) {
-        console.error(err)
+        console.error('Ran into an error: '+ err)
     }
 }
 

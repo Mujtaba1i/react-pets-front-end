@@ -7,9 +7,14 @@ function App() {
   const [pets, setPets] = useState([])
 
   async function getAllPets (){
-    const data = await petService.index()
-    console.log(data)
-    setPets(data)
+    try {
+      const data = await petService.index()
+      console.log(data)
+      setPets(data)      
+    } catch (err) {
+      console.error('Ran into an error: '+ err)
+    }
+
   }
 
   useEffect(() => {
