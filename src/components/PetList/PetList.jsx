@@ -1,8 +1,13 @@
+import { useEffect } from "react"
 import { Link,Navigate } from "react-router"
 
 function PetList({pets}) {
+
+    
+
   return (
     <div>
+    <Link to={'/pets/new'}>Add Pet</Link>
     <h1>Pet List</h1>
         <div>
             {!pets.length ? (<h2>No Pets Yet</h2>) :
