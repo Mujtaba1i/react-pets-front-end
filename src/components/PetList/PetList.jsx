@@ -1,9 +1,24 @@
-import { useEffect } from "react"
+import { useEffect ,useState} from "react"
 import { Link,Navigate } from "react-router"
+import * as petService  from '../../services/petService'
 
-function PetList({pets}) {
 
-    
+function PetList() {
+
+    const [pets, setPets] = useState([])
+
+    async function getAllPets (){
+        try {
+        const data = await petService.index()
+        setPets(data)
+        } catch (err) {
+        console.error('Ran into an error: '+ err)
+        }
+    }
+
+  useEffect(() => {
+    getAllPets()
+  }, [])
 
   return (
     <div>

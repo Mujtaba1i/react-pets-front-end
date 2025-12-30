@@ -31,7 +31,6 @@ async function deletePet(id){
 async function create(pet){
     try {
         const response = await axios.post(`${BASE_URL}`,pet)
-        return response.data.newPet
     } catch (err) {
         // console.error('Ran into an error: '+ err)
         throw new Error(err)
