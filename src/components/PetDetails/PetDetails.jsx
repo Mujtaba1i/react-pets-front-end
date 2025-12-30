@@ -1,6 +1,6 @@
 import { useEffect,useState } from "react"
 import { show } from "../../services/petService"
-import { Navigate , Link , useParams } from "react-router"
+import { Link , useParams } from "react-router"
 
 function PetDetails() {
     const [onePet, setOnePet] = useState(null)

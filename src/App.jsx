@@ -1,15 +1,10 @@
-import { useState,useEffect,useParams } from 'react'
 import { Route,Routes } from 'react-router'
 import PetList from './components/PetList/PetList'
 import PetDetails from './components/PetDetails/PetDetails'
 import PetForm from './components/PetForm/PetForm'
-import * as petService  from './services/petService'
 import './App.css'
 
 function App() {
-  
-
-
 
   return (
     <div>

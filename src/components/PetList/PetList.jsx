@@ -1,5 +1,5 @@
 import { useEffect ,useState} from "react"
-import { Link,Navigate } from "react-router"
+import { Link } from "react-router"
 import * as petService  from '../../services/petService'
 
 
