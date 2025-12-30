@@ -2,7 +2,7 @@ import './App.css'
 import { useState,useEffect } from 'react'
 import * as petService  from './services/petService'
 import PetList from './components/PetList/PetList'
-import { Navigate,Route,Routes } from 'react-router'
+import { Route,Routes } from 'react-router'
 
 function App() {
   
@@ -27,6 +27,7 @@ function App() {
       <h1>HELP!</h1>
       <Routes>
         <Route path='/' element={<PetList pets={pets}/>}/>
+        <Route path='/:id' element=''/>
       </Routes>
     </div>
   )
