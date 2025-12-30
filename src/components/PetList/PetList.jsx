@@ -1,3 +1,4 @@
+import { Link,Navigate } from "react-router"
 
 function PetList({pets}) {
   return (
@@ -8,7 +9,7 @@ function PetList({pets}) {
                 (<ul>
                     {pets.map(onePet=>
                     <li key={onePet._id}>
-                        {onePet.name}
+                        <Link to={`/pets/${onePet._id}`}>{onePet.name}</Link>
                     </li>)}
                 </ul>)}
             </div>

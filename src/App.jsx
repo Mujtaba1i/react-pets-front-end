@@ -1,8 +1,9 @@
-import './App.css'
 import { useState,useEffect } from 'react'
-import * as petService  from './services/petService'
-import PetList from './components/PetList/PetList'
 import { Route,Routes } from 'react-router'
+import PetList from './components/PetList/PetList'
+import PetDetails from './components/PetDetails/PetDetails'
+import * as petService  from './services/petService'
+import './App.css'
 
 function App() {
   
@@ -27,7 +28,7 @@ function App() {
       <h1>HELP!</h1>
       <Routes>
         <Route path='/' element={<PetList pets={pets}/>}/>
-        <Route path='/:id' element=''/>
+        <Route path='/pets/:id' element={<PetDetails/>}/>
       </Routes>
     </div>
   )
