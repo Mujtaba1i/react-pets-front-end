@@ -2,7 +2,7 @@ import './App.css'
 import { useState,useEffect } from 'react'
 import * as petService  from './services/petService'
 import PetList from './components/PetList/PetList'
-import { Route,Routes } from 'react-router'
+import { Navigate,Route,Routes } from 'react-router'
 
 function App() {
   
