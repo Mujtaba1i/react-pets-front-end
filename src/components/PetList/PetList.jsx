@@ -9,10 +9,10 @@ function PetList() {
 
     async function getAllPets (){
         try {
-        const data = await petService.index()
-        setPets(data)
+            const data = await petService.index()
+            setPets(data)
         } catch (err) {
-        console.error('Ran into an error: '+ err)
+            console.error('Ran into an error: '+ err)
         }
     }
 

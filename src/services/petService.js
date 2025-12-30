@@ -22,19 +22,26 @@ async function show(id){
 
 async function deletePet(id){
     try {
-        const response = await axios.delete(`${BASE_URL}/${id}`)
+        await axios.delete(`${BASE_URL}/${id}`)
     } catch (err) {
         console.error('Ran into an error: '+ err)
     }
 }
 
-async function create(pet){
+async function create(data){
     try {
-        const response = await axios.post(`${BASE_URL}`,pet)
+        const response = await axios.post(`${BASE_URL}`,data)
     } catch (err) {
-        // console.error('Ran into an error: '+ err)
         throw new Error(err)
     }
 }
 
-export {index,show,deletePet,create}
+async function update(id,data){
+    try {
+        const response = await axios.put(`${BASE_URL}/${id}`,data)
+    } catch (err) {
+        throw new Error(err)
+    }
+}
+
+export {index,show,deletePet,create,update}
