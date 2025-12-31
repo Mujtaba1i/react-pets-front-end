@@ -14,7 +14,7 @@ async function index (){
 async function show(id){
     try {
         const response = await axios.get(`${BASE_URL}/${id}`)
-        console.log(response);
+        // console.log(response);
         return response.data.onePet
     } catch (err) {
         console.error('Ran into an error: '+ err)
