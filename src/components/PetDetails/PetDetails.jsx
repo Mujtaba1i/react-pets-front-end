@@ -1,6 +1,6 @@
 import { useEffect,useState } from "react"
 import { show } from "../../services/petService"
-import { useNavigate,Link , useParams } from "react-router"
+import { useNavigate , Link , useParams } from "react-router"
 import { deletePet } from "../../services/petService"
 
 function PetDetails() {
