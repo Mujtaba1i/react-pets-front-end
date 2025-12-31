@@ -22,7 +22,7 @@ function PetForm() {
         try {
             const payload = {...form}
             payload.age = Number(payload.age)
-            await create(payload)
+            await create(payload) 
             Navigate('/')
         } catch (err) {
             console.error('Ran into an error: '+ err)
